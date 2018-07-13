@@ -1,12 +1,13 @@
 package com.expample.test1;
 
+ import com.expample.test1.domain.Message;
  import com.expample.test1.repos.MessageRepo;
  import org.springframework.beans.factory.annotation.Autowired;
  import org.springframework.stereotype.Controller;
  import org.springframework.web.bind.annotation.GetMapping;
  import org.springframework.web.bind.annotation.PostMapping;
  import org.springframework.web.bind.annotation.RequestParam;
- import sun.plugin2.message.Message;
+
 
  import java.util.Map;
 
@@ -24,7 +25,7 @@ package com.expample.test1;
         }
         @GetMapping
         public String main(Map<String, Object> model){
-            Iterable<domain.Message> messages  = messageRepo.findAll();
+            Iterable<Message> messages  = messageRepo.findAll();
 
             model.put("messages", messages);
 
@@ -32,11 +33,11 @@ package com.expample.test1;
         }
         @PostMapping("/main")
         public String add(@RequestParam String frst, @RequestParam String last, Map<String, Object> model ){
-            domain.Message message = new domain.Message(frst, last);
+            Message message = new Message(frst, last);
 
             messageRepo.save(message);
 
-            Iterable<domain.Message> messages = messageRepo.findAll();
+            Iterable<Message> messages = messageRepo.findAll();
 
             model.put("messages", message);
 

@@ -3,17 +3,17 @@
 <body>
     <div>
         <form method="post">
-            <input type="text" name="last" placeholder="Введите Фамиля">
             <input type="text" name="frst" placeholder="Введите имя">
-            <button> type="submit"Добавить</button>
+            <input type="text" name="last" placeholder="Введите Фамиля">
+            <button type= "submit">Добавить</button>
         </form>
     </div>
     <div>Список работников</div>
     {{#messages}}
     <div>
         <b>{{id}}</b>
-        <span>{{last}}</span>
-        <i>{{frst}}</i>
+        <b>{{frst}}</b>
+        <b>{{last}}</b>
     </div>
     {{/messages}}
 </body>

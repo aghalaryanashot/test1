@@ -1,4 +1,4 @@
-package domain;
+package com.expample.test1.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,12 +15,12 @@ public class Message {
     private String frst;
     private String last;
 
-    public Message() {
-    }
-
     public Message(String frst, String last) {
         this.frst = frst;
         this.last = last;
+    }
+
+    public Message() {
     }
 
     public Integer getId() {
