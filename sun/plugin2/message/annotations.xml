@@ -1,0 +1,5 @@
+<root>
+    <item name='sun.plugin2.message.Message'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
